@@ -296,6 +296,8 @@ jobs:
       - name: Generate IonStack config
         id: generate
         run: |
+          Node.env
+          Node2.env
           python3 gen_ionstack_config.py kernel.elf ionstack.conf
           echo '==================== Generated Config ===================='
           cat ionstack.conf
